@@ -13,6 +13,7 @@ class Accountant(AdminStaff):
     def __init__(self, salary, role):
         super().__init__(role)
         self.salary = salary
+####################################### second comment here to test git #####################################
 
 acc1 = Accountant(50_000, "CA")
 
