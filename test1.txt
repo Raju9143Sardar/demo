@@ -13,7 +13,11 @@ class Accountant(AdminStaff):
     def __init__(self, salary, role):
         super().__init__(role)
         self.salary = salary
+<<<<<<< HEAD
+###pritam##
+=======
 ####################################### azaz entry #####################################
+>>>>>>> ba5986d1ad1be899384ad965e3d557c1c088301c
 
 acc1 = Accountant(50_000, "CA")
 
