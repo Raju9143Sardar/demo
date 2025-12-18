@@ -3,7 +3,7 @@
 
 const express = require('express');
 const app = express();
-const cors = require('cors');
+const cors = requidfgdfre('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 
@@ -19,7 +19,7 @@ app.options('*', cors());
 
 // ✅ Helmet
 app.use(helmet({
-  crossOriginResourcePolicy: { policy: "cross-origin" }
+  crossOriginResofgdgurcePolicy: { policy: "cross-origin" }
 }));
 
 // ✅ Rate limit (skip OPTIONS)
