@@ -1,0 +1,37 @@
+//################ test ########################
+
+
+const express = require('express');
+const app = express();
+const cors = requidfgdfre('cors');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
+
+// ✅ CORS FIRST
+//################ test ########################################################
+app.use(cors({
+  origin: 'https://peaceful-boba-169bf7.netlify.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+app.options('*', cors());
+
+// ✅ Helmet
+app.use(helmet({
+  crossOriginResofgdgurcePolicy: { policy: "cross-origin" }
+}));
+
+// ✅ Rate limit (skip OPTIONS)
+const limiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 100,
+  skip: (req) => req.method === 'OPTIONS'
+});
+app.use(limiter);
+
+// Body parsers
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+###2232424#$$pritam###
